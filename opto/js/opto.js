@@ -74,6 +74,7 @@ function getSubcategoryText(subCategoryID, promptID){
         data: "id="+subCategoryID,
         dataType: "html",
         success: function(retorno){
+            loadGptResponse(retorno, promptID)
             insertTextDB(retorno, promptID)
         }
     })
